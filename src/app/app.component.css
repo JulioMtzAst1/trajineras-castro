@@ -1,0 +1,52 @@
+.mat-toolbar {
+  height: 15vh;
+  background-color: #ffdf00;
+}
+
+.mat-toolbar img {
+  border-radius: 25px;
+  margin: 50px;
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+  height: 115px; /* Permite que la altura se ajuste automáticamente */
+  padding: 10px;
+  object-fit: cover;
+}
+
+.mat-toolbar img:hover,
+.mat-toolbar img:active{
+    filter: contrast(110%);
+}
+
+.page-title {
+  font-size: 45px;
+  margin: 150px;
+}
+
+.element {
+  margin: 20px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: blanchedalmond;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buton-container{
+    text-align: right;
+}

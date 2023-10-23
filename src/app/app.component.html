@@ -1,0 +1,42 @@
+<mat-toolbar>
+  <div class="col-mb-3">
+    <img
+      src="..\assets\Logo.jpg"
+      alt="Logo Trajineas Castro"
+      width="150"
+      height="auto"
+      routerLink="/"
+    />
+  </div>
+
+  <div class="col-mb-3">
+    <h2 class="page-title">Trajineras Castro</h2>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="contenedor">
+    <div class="buton-container">
+      <button mat-icon-button class="element">
+        <mat-icon>call</mat-icon>
+      </button>
+      <button mat-icon-button class="element">
+        <mat-icon>facebook-box</mat-icon>
+      </button>
+      <button mat-icon-button class="element">
+        <mat-icon>mail_outline</mat-icon>
+      </button>
+    </div>
+    <div>
+      <a routerLink="/" class="element">Inicio</a>
+      <a routerLink="/tours" class="element">Tours</a>
+      <a routerLink="/" class="element">Eventos</a>
+      <a routerLink="/" class="element">Cotizaciones</a>
+      <a routerLink="/contacto" class="element">Contacto</a>
+    </div>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<footer>
+
+</footer>

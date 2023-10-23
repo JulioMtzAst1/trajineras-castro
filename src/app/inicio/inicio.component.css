@@ -1,0 +1,38 @@
+.content-container{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.tamanio-imagen{
+    height: 500px;
+}
+
+.titulo{
+    font-size: 50px;
+    text-align: center;
+    padding: 50px;
+    color: #a2231d;
+}
+
+mat-card{
+    width: 40%;
+}
+
+mat-card-title{
+    font-size: 30px;
+    text-align: center;
+    color: #1c542d;
+    padding: 20px;
+}
+
+mat-card-content{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.advertising-container{
+    text-align: center;
+}
