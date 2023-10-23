@@ -1,12 +1,12 @@
 .content-container{
     width: 80%;
-    height: 500px;
+    height: auto;
     margin: auto;
     padding-top: 20px;
 }
 
 .tamanio-imagen{
-    height: 500px;
+    height: 650px;
 }
 
 .titulo{
@@ -16,15 +16,11 @@
     color: #a2231d;
 }
 
-mat-card{
-    width: 40%;
-}
-
 mat-card-title{
     font-size: 30px;
     text-align: center;
     color: #1c542d;
-    padding: 20px;
+    padding: 10px;
 }
 
 mat-card-content{

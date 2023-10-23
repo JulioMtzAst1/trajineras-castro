@@ -1,6 +1,6 @@
 .mat-toolbar {
   height: 15vh;
-  background-color: #ffdf00;
+  background: linear-gradient(45deg, #FFA500, #FFD700, #FFFF00);
 }
 
 .mat-toolbar img {

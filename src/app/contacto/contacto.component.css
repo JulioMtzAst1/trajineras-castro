@@ -1,0 +1,36 @@
+.titulo{
+    font-size: 30px;
+}
+
+mat-card-title{
+    font-size: 30px;
+    text-align: center;
+    color: #a2231d;
+    padding: 10px;
+}
+
+mat-card-content{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#cuenta{
+    font-size: 75px;
+    width: auto;
+    height: auto;
+}
+
+.boton{
+    width: 100px;
+    background: greenyellow;
+}
+
+.contenedor-mapa{
+    width: auto;
+    height: auto;
+}
+
+.tamanio-imagen{
+    height: 650px;
+}
