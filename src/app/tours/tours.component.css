@@ -1,0 +1,26 @@
+.card-image{
+    max-width: 100%;
+    border-radius: 25px;
+    height: 400px;
+}
+
+mat-card{
+    text-align: center;
+    margin: 30px;
+}
+
+p{
+    margin: 15px;
+}
+
+.title{
+    font-size: 36px;
+    text-align: center;
+    color: #a2231d;
+}
+
+mat-card-title{
+    font-size: 25px;
+    color: #1c542d;
+    margin: 15px;
+}

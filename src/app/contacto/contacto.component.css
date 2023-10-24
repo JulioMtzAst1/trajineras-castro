@@ -3,10 +3,11 @@
 }
 
 mat-card-title{
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
     color: #a2231d;
     padding: 10px;
+    margin: 15px;
 }
 
 mat-card-content{
@@ -33,4 +34,25 @@ mat-card-content{
 
 .tamanio-imagen{
     height: 650px;
+}
+
+.texto{
+    text-align: center;
+}
+
+#qr-maps{
+    height: 250px;
+    width: 250px;
+}
+
+#mapa{
+    width: 800px;
+}
+
+.contenedor-textos{
+    text-align: center;
+}
+
+.element{
+    margin-top: 15px;
 }
