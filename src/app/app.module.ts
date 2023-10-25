@@ -8,13 +8,17 @@ import { ToursComponent } from './tours/tours.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventosComponent } from './eventos/eventos.component';
+import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     ToursComponent,
-    ContactoComponent
+    ContactoComponent,
+    EventosComponent,
+    CotizacionesComponent
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@ mat-card-content{
 }
 
 #mapa{
-    width: 800px;
+    max-width: 100%;
 }
 
 .contenedor-textos{
