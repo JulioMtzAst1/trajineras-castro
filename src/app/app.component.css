@@ -1,25 +1,31 @@
 .mat-toolbar {
   height: 15vh;
+  max-width: 100%;
   background: linear-gradient(45deg, #FFA500, #FFD700, #FFFF00);
 }
 
 .mat-toolbar img {
   border-radius: 25px;
   margin: 50px;
-  width: 200px; /* Ajusta el ancho según tus necesidades */
-  height: 115px; /* Permite que la altura se ajuste automáticamente */
+  width: 200px;
+  height: 115px;
   padding: 10px;
   object-fit: cover;
 }
 
 .mat-toolbar img:hover,
 .mat-toolbar img:active{
-    filter: contrast(110%);
+  filter: contrast(110%);
 }
 
 .page-title {
   font-size: 45px;
   margin-left: 50px;
+  color: black;
+}
+
+.page-title:hover, .page-title:active{
+  color: blanchedalmond;
 }
 
 .element {
@@ -48,5 +54,17 @@ a:active {
 }
 
 .buton-container{
-    text-align: right;
+  text-align: right;
+}
+
+@media screen and (max-width: 800px){
+  .page-title{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .contenedor{
+    display: none;
+  }
 }
