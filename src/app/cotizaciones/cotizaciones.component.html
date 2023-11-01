@@ -1,41 +1,65 @@
-<mat-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+<mat-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup" errorMessage="Datos Faltantes">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input
-          matInput
-          placeholder="Last name, First name"
-          formControlName="firstCtrl"
-          required
-        />
-      </mat-form-field>
+      <ng-template matStepLabel>Datos Generales</ng-template>
+
+      <div class="row justify-content-start">
+        <div class="col-md-3">
+          <mat-form-field class="entrada">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput formControlName="nombre" required />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field class="entrada">
+            <mat-label>Apellido</mat-label>
+            <input type="text" matInput formControlName="apellido" required />
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="entrada">
+            <mat-label>Correo Electronico</mat-label>
+            <input type="email" matInput formControlName="email" required />
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field class="entrada">
+            <mat-label>Telefono</mat-label>
+            <input type="tel" matInput formControlName="telefono" required />
+          </mat-form-field>
+        </div>
+        <div class="col-md-1 justify-content-center">
+          <mat-form-field class="entrada">
+            <mat-label>Visitantes</mat-label>
+            <input type="number" matInput formControlName="noVisitantes" required />
+          </mat-form-field>
+        </div>
+      </div>
+
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext>Siguiente</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Datos Faltantes">
     <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Paquete</ng-template>
       <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input
-          matInput
-          formControlName="secondCtrl"
-          placeholder="Ex. 1 Main St, New York, NY"
-          required
-        />
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="secondCtrl" required />
       </mat-form-field>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Regresar</button>
+        <button mat-button matStepperNext>Cotizar</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matStepLabel>Cotización</ng-template>
+    <p>Datos de su cotizaciòn:</p>
+    <div class="row">
+      <span>Aqui van los datos</span>
+    </div>
     <div>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>

@@ -10,6 +10,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventosComponent } from './eventos/eventos.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     MaterialModule,
     BrowserAnimationsModule
   ],
