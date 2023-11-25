@@ -1,7 +1,8 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { OnInit } from '@angular/core';
+import { validateVerticalPosition } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-cotizaciones',
@@ -14,19 +15,29 @@ import { OnInit } from '@angular/core';
     },
   ],
 })
-export class CotizacionesComponent {
-  
-  firstFormGroup = this._formBuilder.group({
-    nombre: ['', Validators.required],
-    apellido: ['', Validators.required],
-    email: ['', Validators.required, Validators.email],
-    telefono: ['', Validators.required],
-    noVisitantes: [1, Validators.max(25)]
-  });
+export class CotizacionesComponent implements OnInit {
+
+  paquetes:string[] = ['Paquete 1', 'Paquete 2', 'Paquete 3', 'Paquete 4'];
+  formularioDatos: FormGroup;
 
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
   });
 
   constructor(private _formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.cargarFormulario();
+  }
+
+
+  cargarFormulario() {
+    this.formularioDatos = new FormGroup({
+      nombre: new FormControl(null, Validators.required),
+      apellido: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      telefono: new FormControl(null),
+      noVisitantes: new FormControl(null, Validators.min(1))
+    })
+  }
 }
