@@ -1,8 +1,10 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, AfterContentInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { OnInit } from '@angular/core';
 import { validateVerticalPosition } from '@angular/cdk/overlay';
+import { PrimerStepComponent } from './primer-step/primer-step.component';
+import { SecondStepComponent } from './second-step/second-step.component';
 
 @Component({
   selector: 'app-cotizaciones',
@@ -15,10 +17,13 @@ import { validateVerticalPosition } from '@angular/cdk/overlay';
     },
   ],
 })
-export class CotizacionesComponent implements OnInit {
+export class CotizacionesComponent implements OnInit, AfterViewInit{
 
+  @ViewChild(PrimerStepComponent) primerStep: PrimerStepComponent;
+  @ViewChild(SecondStepComponent) segundoStep: SecondStepComponent;
   paquetes:string[] = ['Paquete 1', 'Paquete 2', 'Paquete 3', 'Paquete 4'];
-  formularioDatos: FormGroup;
+  firstForm: FormGroup;
+  secondForm: FormGroup;
 
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
@@ -27,17 +32,12 @@ export class CotizacionesComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.cargarFormulario();
+
   }
 
-
-  cargarFormulario() {
-    this.formularioDatos = new FormGroup({
-      nombre: new FormControl(null, Validators.required),
-      apellido: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email]),
-      telefono: new FormControl(null),
-      noVisitantes: new FormControl(null, Validators.min(1))
-    })
+  ngAfterViewInit(): void {
+    this.firstForm = this.primerStep.getForm();
+    this.secondForm = this.segundoStep.getForm();
   }
+
 }

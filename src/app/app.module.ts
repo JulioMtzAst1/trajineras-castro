@@ -10,7 +10,9 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventosComponent } from './eventos/eventos.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrimerStepComponent } from './cotizaciones/primer-step/primer-step.component';
+import { SecondStepComponent } from './cotizaciones/second-step/second-step.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToursComponent,
     ContactoComponent,
     EventosComponent,
-    CotizacionesComponent
+    CotizacionesComponent,
+    PrimerStepComponent,
+    SecondStepComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

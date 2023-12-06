@@ -1,0 +1,35 @@
+<div class="row">
+  <label>Escoge tu paquete: </label>
+</div>
+<div class="row">
+  <mat-radio-group [formControl] = "">
+    <div class="row">
+        <mat-radio-button *ngFor="let paquete of paquetes" [value]="paquete.valor">
+          {{ paquete.nombre }}
+        </mat-radio-button>
+    </div>
+  </mat-radio-group>
+</div>
+<div class="row">
+  <button
+    mat-raised-button
+    class="col-md-2 col-sm-2"
+    color="accent"
+    matStepperPrevious
+  >
+    Regresar
+  </button>
+  <button
+    mat-raised-button
+    class="col-md-2 col-sm-2"
+    style="margin-left: 10px"
+    color="primary"
+    matStepperNext
+  >
+    Cotizar
+  </button>
+</div>
+
+<p>{{selectedPackage}}</p>
+
+<button (click)="imprimirFormulario()">Imprimir Formulario</button>

@@ -16,3 +16,8 @@ body {
   margin: auto;
   padding-top: 20px;
 }
+
+.entrada {
+  max-width: 100%;
+  width: 100%;
+}
