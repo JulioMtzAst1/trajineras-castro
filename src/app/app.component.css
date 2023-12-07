@@ -1,7 +1,6 @@
 .mat-toolbar {
   height: 15vh;
   max-width: 100%;
-  background: linear-gradient(45deg, #00CB86, #9FFBD1);
   background: linear-gradient(45deg, #a0a9d9, #d5dcf0);
 }
 

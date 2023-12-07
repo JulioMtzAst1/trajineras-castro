@@ -1,21 +1,22 @@
 <div class="container">
-  <mat-stepper #stepper>
+  <mat-stepper #stepper [linear]="true">
 
-    <mat-step [stepControl]="firstForm" errorMessage="Datos Faltantes">
+    <mat-step [stepControl]="formCotizacion" errorMessage="Datos faltantes">
       <ng-template matStepLabel>Datos Generales</ng-template>
-      <app-primer-step></app-primer-step>
+      <app-primer-step (eventosSC)="eventosStepCotizacion($event)"></app-primer-step>
     </mat-step>
 
-    <mat-step [stepControl]="secondFormGroup" errorMessage="Datos Faltantes">
+    <mat-step [stepControl]="formCotizacion" errorMessage="Datos faltantes">
       <ng-template matStepLabel>Paquete</ng-template>
-      <app-second-step></app-second-step>
+      <app-second-step (eventosSC)="eventosStepCotizacion($event)"></app-second-step>
     </mat-step>
 
     <mat-step>
       <ng-template matStepLabel>Cotización</ng-template>
       <p>Datos de su cotizaciòn:</p>
       <div class="row">
-        <span>Aqui van los datos</span>
+        <span>Costo del Paseo</span>
+        <p>{{costoPaseo | currency}}</p>
       </div>
       <div class="row">
         <button
@@ -32,6 +33,7 @@
           style="margin-left: 10px"
           color="warn"
           (click)="stepper.reset()"
+          (click)="resetFormulario()"
         >
           Nueva Cotización
         </button>

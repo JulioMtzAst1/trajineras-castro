@@ -7,7 +7,7 @@
         <mat-error
           *ngIf="formularioDatos.get('nombre')?.hasError('required')"
         >
-          Por favor, ingresa tu nombre
+          Ingresa tu nombre
         </mat-error>
       </mat-form-field>
     </div>
@@ -18,7 +18,7 @@
         <mat-error
           *ngIf="formularioDatos.get('apellido')?.hasError('required')"
         >
-          Por favor, ingresa tu apellido
+          Ingresa tu apellido
         </mat-error>
       </mat-form-field>
     </div>
@@ -38,7 +38,7 @@
           Es necesario ingresar un correo electrónico
         </mat-error>
         <mat-error *ngIf="formularioDatos.get('email')?.hasError('email')">
-          Por favor, ingresa un correo electrónico valido
+          Ingresa un correo electrónico valido
         </mat-error>
       </mat-form-field>
     </div>
@@ -65,6 +65,9 @@
         <mat-error *ngIf="formularioDatos.get('noVisitantes')?.hasError('min')">
           Ingresa un numero valido.
         </mat-error>
+        <mat-error *ngIf="formularioDatos.get('noVisitantes')?.hasError('required')">
+          Ingresa un numero.
+        </mat-error>
       </mat-form-field>
     </div>
   </div>
@@ -75,6 +78,8 @@
       color="primary"
       class="col-md-1 col-sm-2"
       matStepperNext
+      [disabled]="!formularioValido"
+      (click)="cotizarPaquete()"
     >
       Siguiente
     </button>
